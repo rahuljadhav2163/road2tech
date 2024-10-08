@@ -29,14 +29,12 @@ const Footer = () => {
         </div>
         <div className="footer-section contact">
           <h3>Contact Us</h3>
-          <p>
-            <i className="fas fa-phone"></i> &nbsp; +91 95270 91856
-          </p>
+         
           <p>
             <i className="fas fa-phone"></i> &nbsp; +91 75594 12440
           </p>
           <p>
-            <i className="fas fa-envelope"></i> &nbsp; info@elearning.com
+            <i className="fas fa-envelope"></i> &nbsp; rode2tech@gmail.com
           </p>
           <p>
             <i className="fas fa-map-marker-alt"></i> &nbsp; 123- karvenagar, Pune City - 412307

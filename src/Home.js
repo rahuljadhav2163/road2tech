@@ -1,12 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Home.css"
 import CustomNavbar from './component/Navbar/Navbar'
 import Coursecard from './component/Coursecard/Coursecard';
 import Footer from './component/Footer/Footer';
 import { Code, Smartphone, Brain, Shield, Database, Cloud } from 'lucide-react'
+import emailjs from 'emailjs-com';
+
 
 function Home() {
-    // ... (previous code remains the same)
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+        mob:'',
+        college:''
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        emailjs.send('service_7ha30am', 'template_jbngh4c', formData, 'cIVMkrLTx54N657oZ')
+        .then((response) => {
+            alert('Message sent successfully!');
+        }, (error) => {
+            console.error('Failed to send message:', error);
+            alert('Failed to send message. Please try again.');
+        });
+    };
+
+   
     const cardData = [
         {
 
@@ -181,6 +211,63 @@ function Home() {
                     ))}
                 </div>
             </div>
+           <div className='form-c'>
+           <div id="contact" className="contact-section">
+                <h2>Contact Us</h2>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label>Name:</label>
+                        <input
+                            type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label>Email:</label>
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label>Mob.No:</label>
+                        <input
+                           
+                            name="mob"
+                            value={formData.mob}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label>College Name :</label>
+                        <input
+                           
+                            name="college"
+                            value={formData.college}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label>Message:</label>
+                        <textarea
+                            name="message"
+                            value={formData.message}
+                            onChange={handleInputChange}
+                            required
+                        />
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+           </div>
             <div id="contact">
                 <Footer/>
             </div>

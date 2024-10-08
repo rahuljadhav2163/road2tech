@@ -62,8 +62,9 @@
 }
 
 .lg {
-  height: 50px;
+  height: 40px;
   margin-top: 6px;
+  border-radius: 10%;
 }
 
 .name-web {
