@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.custom-navbar {
+  background-color: #042439;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+.custom-navbar.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin: 0 0.5rem;
+  font-weight: 500 !important;
+}
+
+.nav-link:hover {
+  color: #0fbffe !important;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.btn-nav {
+  background-color: #4979d1 !important;
+  padding: 8px 20px !important;
+  border-radius: 8px;
+  width: 100px;
+  text-align: center;
+}
+
+.btn-nav:hover {
+  color: white !important;
+}
+
+.ml {
+  margin-left: 150px;
+}
+
+.me {
+  margin-right: -100px;
+}
+
+.lg {
+  height: 50px;
+  margin-top: 6px;
+}
+
+.name-web {
+  color: #4979d1;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 27px;
+}
+
+/* Add padding to the body to prevent content from being hidden under the navbar */
+body {
+  padding-top: 75px;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    background-color: #042439;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-nav {
+    margin-top: 5px;
+  }
+
+  .ml {
+    margin-left: 10px;
+  }
+
+  .me {
+    margin-right: 0px;
+  }
+}
+
+/* ... (existing styles) */
+
+.phone-number {
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  .phone-number:hover {
+    background-color: #e9ecef;
+  }
+  
+  @media (max-width: 991px) {
+    .phone-number {
+      margin-top: 10px;
+      justify-content: center;
+    }
+  }
